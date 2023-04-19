@@ -1,0 +1,38 @@
+#include<iostream>
+using namespace std;
+class BC
+{
+    public:
+    void display ()
+    {
+        cout<<"display_base"<<endl;
+    }
+    virtual void show()
+    {
+        cout<<"show_base"<<endl;
+    }
+};
+class DC:public BC
+{
+    void display()
+    {
+        cout<<"display_derived"<<endl;
+    }
+    void show()
+    {
+        cout<<"show_derived"<<endl;
+    }
+};
+int main()
+{
+    BC *bptr;
+    bptr=new BC;
+    bptr->display();
+    bptr->show();
+    
+    bptr=new DC;
+    bptr->display();
+    bptr->show();
+    
+    return 0;
+}
