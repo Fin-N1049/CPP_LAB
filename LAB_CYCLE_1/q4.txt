@@ -1,0 +1,54 @@
+#include<iostream>
+using namespace std;
+
+class String
+{
+    string name;
+    public:
+    void input(void);
+    void compare (String b);
+    void concatenate(String a,String b);
+    void Length(void);
+};
+void String::input(void)
+{
+    cout<<"enter name of the string : ";
+    cin>>name;
+}
+void String:: compare (String b)
+{
+    if(name==b.name)
+    {
+        cout<<"both strings are the same"<<endl;
+    }
+    else 
+    {
+        cout<<"the strings are different"<<endl;
+    }
+}
+void String::concatenate(String a,String b)
+{
+    String c;
+    name=a.name+b.name;
+    cout<<"the concatenate string is "<<name<<endl;
+}
+void String::Length(void)
+{
+    int leng;
+    leng=name.length();
+    cout<<"length of the string is "<<leng<<endl;
+    
+}
+int main()
+{
+String a,b,c;
+a.input();
+b.input();
+a.compare(b);
+c.concatenate(a,b);
+a.Length();
+b.Length();
+c.Length();
+
+return 0;
+}

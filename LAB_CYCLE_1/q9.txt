@@ -1,0 +1,20 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+class obj{
+    int static count;
+public:
+        obj(){
+            count++;
+        }
+        void static showcount(){
+            cout<<"no of objects created "<<count;
+        }
+};
+int obj::count;
+
+int main(){
+    obj f2,f1,f3,f4,f5;
+    obj::showcount();
+    return 0;
+}
