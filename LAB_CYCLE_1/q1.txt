@@ -7,7 +7,10 @@ class student
 		char name[10];
 		int roll_no;
 		int marks[3];
-                char grade;
+        char grade;
+        int totalmarks;
+	    float pctg;
+	    
 	public:
 		void input(void);
 		char calc_grade(void);
@@ -21,15 +24,20 @@ class student
 	   cin>>name;
 	   cout<<"enter roll number: ";
 	   cin>>roll_no;
-	   cout<<"enter the marks in 3 subjects out of 100 : ";
-	   cin>>marks[0]>>marks[1]>>marks[2];
+	   cout<<"enter the mark of student in physics   out of 100 : ";
+	   cin>>marks[0];
+	   if (marks[0]>100)
+       cout<<"enter the mark of student in chemistry out of 100 : ";
+       cin>>marks[1];
+       cout<<"enter the mark of student in maths     out of 100 : ";
+       cin>>marks[2];
+       
 
    }
 
    char student::calc_grade()
    {
-	   int totalmarks;
-	   float pctg;
+	  
 	   totalmarks=marks[0]+marks[1]+marks[2];
 	   pctg=totalmarks/3;
 
@@ -48,19 +56,35 @@ class student
 
    void student::display()
    {
+       cout<<endl<<endl<<endl;
      cout<<"Name of student: "<<name<<"\n";
      cout<<"Roll no : "<<roll_no<<"\n";
-     cout<<"Marks: "<<marks[0]<<","<<marks[1]<<","<<marks[2]<<"\n";
-     cout<<"Grade: "<<grade;
+     cout<<"Mark of student in physics   out of 100 : "<<marks[0]<<endl;
+     cout<<"Mark of student in chemistry out of 100 : "<<marks[1]<<endl;
+     cout<<"Mark of student in maths     out of 100 : "<<marks[2]<<endl;
+     cout<<"Total marks of the student :"<<totalmarks<<endl;
+     cout<<"percentage of the student  :"<<pctg<<endl;
+     cout<<"Grade: "<<grade<<endl;
    }
 
 int main()
 {
-	student st1;
-	st1.input();
-	st1.calc_grade();
-	st1.display();
+    int n;
+    cout<<"enter the number of students for calculating grades  :";
+    cin>>n;
+    cout<<endl;
+    student s[n];
+    for (int i=0;i<n;i++)
+    {
+        cout<<"details of student "<<i+1<<endl;
+        s[i].input();
+        s[i].calc_grade();
+    }
+      for (int i=0;i<n;i++)
+    {
+        s[i].display();
+    }
+    
 
 	return 0;
 }
-
