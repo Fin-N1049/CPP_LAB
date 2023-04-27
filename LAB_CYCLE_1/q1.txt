@@ -27,10 +27,29 @@ class student
 	   cout<<"enter the mark of student in physics   out of 100 : ";
 	   cin>>marks[0];
 	   if (marks[0]>100)
+	    { cout<<"!!!error!!! ,(note :marks cannot be more than 100 ),please enter the marks again ";
+	    cin>>marks[0];}
+	   else{
+
+	   }
        cout<<"enter the mark of student in chemistry out of 100 : ";
        cin>>marks[1];
+       if (marks[1]>100)
+	    {cout<<"!!!error!!! ,(note :marks cannot be more than 100 ),please enter the marks again ";
+	    cin>>marks[1];}
+	    else
+	    {
+	        
+	    }
        cout<<"enter the mark of student in maths     out of 100 : ";
        cin>>marks[2];
+       if (marks[2]>100)
+	    {cout<<"!!!error!!! ,(note :marks cannot be more than 100 ),please enter the marks again ";
+	    cin>>marks[2];}
+	    else
+	    {
+	        
+	    }
        
 
    }
@@ -56,14 +75,14 @@ class student
 
    void student::display()
    {
-       cout<<endl<<endl<<endl;
+       cout<<endl<<endl;
      cout<<"Name of student: "<<name<<"\n";
      cout<<"Roll no : "<<roll_no<<"\n";
      cout<<"Mark of student in physics   out of 100 : "<<marks[0]<<endl;
      cout<<"Mark of student in chemistry out of 100 : "<<marks[1]<<endl;
      cout<<"Mark of student in maths     out of 100 : "<<marks[2]<<endl;
      cout<<"Total marks of the student :"<<totalmarks<<endl;
-     cout<<"percentage of the student  :"<<pctg<<endl;
+     cout<<"percentage of the student  :"<<pctg<<"%"<<endl;
      cout<<"Grade: "<<grade<<endl;
    }
 
@@ -80,6 +99,8 @@ int main()
         s[i].input();
         s[i].calc_grade();
     }
+    cout<<""<<endl<<endl;
+    cout<<"----------------EXAM RESULTS--------------"<<endl;
       for (int i=0;i<n;i++)
     {
         s[i].display();
