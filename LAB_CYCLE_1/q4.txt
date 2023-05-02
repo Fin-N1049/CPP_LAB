@@ -5,25 +5,32 @@ class String
 {
     string name;
     public:
-    void input(void);
+    void input ()
+    {
+    cout<<"enter the string : ";
+    cin>>name;
+    }
     void compare (String b);
     void concatenate(String a,String b);
     void Length(void);
 };
-void String::input(void)
-{
-    cout<<"enter name of the string : ";
-    cin>>name;
-}
+
 void String:: compare (String b)
 {
-    if(name==b.name)
+    int x,y;
+    x=name.length();
+    y=b.name.length();
+    if(x==y)
     {
-        cout<<"both strings are the same"<<endl;
+        cout<<"both strings are of the same length"<<endl;
+    }
+    else if(x<y)
+    {
+        cout<<name<<"is smaller than"<<b.name<<endl;
     }
     else 
     {
-        cout<<"the strings are different"<<endl;
+        cout<<name<<"is larger than"<<b.name<<endl;
     }
 }
 void String::concatenate(String a,String b)
@@ -41,14 +48,38 @@ void String::Length(void)
 }
 int main()
 {
+    
 String a,b,c;
+
+cout<<"enter first the string : ";
 a.input();
+cout<<"enter name of the string : ";
 b.input();
-a.compare(b);
-c.concatenate(a,b);
-a.Length();
-b.Length();
-c.Length();
+    
+do{
+int choice;
+cout<<"-----String operatons-----\n\n";
+cout<<"enter the corresponding number to perform the operation\n";
+cout<<"1.compare the strings\n";
+cout<<"2.concatenate the strings\n";
+cout<<"3.length of the strings\n";
+cin>>choice;
+switch(choice){
+case 1:
+      a.compare(b);
+case 2:
+      c.concatenate(a,b);
+case 3:
+      a.Length();
+      b.Length();
+      c.Length();
+default:
+      cout<<"invalid operation,re-enter your choice\n";
+}
+int option;
+cout<<"do you want to continue with the program \n enter y for yes and n for no";
+cin>>option;
+ while(option==y)
 
 return 0;
 }
