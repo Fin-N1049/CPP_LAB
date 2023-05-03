@@ -91,6 +91,8 @@ bool vector::operator>=(vector &a)
 }
 int main()
 {
+    char option;
+    do {
     vector ob1,ob2;
     cout<<"Enter the values for the first vector"<<endl;
     ob1.get_values();
@@ -158,17 +160,22 @@ int main()
         
                     
             }
-             cout<<"_____Thank you____";
+             cout<<"do you want to continue ?(y/n)";
+             cin>>option;
+             if(option=='n')
+             {
+                 cout<<"----thank you----";
+             }
+             else
+             {
+                 
+             }
+    }while(option=='y');
+             
+             
     return 0;
-  
 
-
-
-
-
-
-!!!!!!!!!!!!!!!!!!q2!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
+}
 
 
 
