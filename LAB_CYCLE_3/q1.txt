@@ -1,38 +1,81 @@
 #include<iostream>
+#include<cstring>
 using namespace std;
-class BC
+class person
 {
+    protected :
+    string name;
+    int idno;
+    int salary;
+    int fee;
+   
     public:
-    void display ()
+    virtual void input ()
     {
-        cout<<"display_base"<<endl;
     }
-    virtual void show()
+    virtual void display()
     {
-        cout<<"show_base"<<endl;
     }
 };
-class DC:public BC
+class student:public person
 {
+    void input()
+    {
+       cout<<"\n----STUDENT----\n";
+       cout<<"enter the name :";
+       cin>>name;
+       cout<<"enter id number : ";
+       cin>>idno;
+       cout<<"enter fee amount :";
+       cin>>fee;
+    }
     void display()
     {
-        cout<<"display_derived"<<endl;
+         cout<<"\n\n----STUDENT----\n";
+       cout<<"name of the student :";
+       cout<<name;
+       cout<<"\nid number of the student: ";
+       cout<<idno;
+       cout<<"\nfee  :";
+       cout<<fee;
+       cout<<"\n---------------------------";
     }
-    void show()
+};
+class teacher:public person
+{
+    void input()
     {
-        cout<<"show_derived"<<endl;
+         cout<<"\n\n----TEACHER----\n";
+        cout<<"enter the name :";
+       cin>>name;
+       cout<<"\nenter id number : ";
+       cin>>idno;
+       cout<<"\nsalary :";
+       cin>>salary;
+       
+    }
+    void display()
+    {
+         cout<<"\n----TEACHER----\n";
+       cout<<"name of the student :";
+       cout<<name;
+       cout<<"\nid number of the student: ";
+       cout<<idno;
+       cout<<"\nsalary  :";
+       cout<<salary;
     }
 };
 int main()
 {
-    BC *bptr;
-    bptr=new BC;
-    bptr->display();
-    bptr->show();
+    person *bptr;
     
-    bptr=new DC;
+    bptr=new student;
+    bptr->input();
     bptr->display();
-    bptr->show();
+    
+    bptr=new teacher;
+    bptr->input();
+    bptr->display();
     
     return 0;
 }
