@@ -1,9 +1,13 @@
 #include<iostream>
 using namespace std;
 int main(){
+    char option;
+    do{
     int num,den,result;
-    cout<<"enter num and den:"<<endl;
-    cin>>num>>den;
+    cout<<"\nenter numerator:"<<endl;
+    cin>>num;
+    cout<<"\nenter denominator:"<<endl;
+    cin>>den;
     
     try{
         if (den==0)
@@ -11,12 +15,20 @@ int main(){
             throw den ;
         }
     result=num/den;
-    cout<<result;
+    cout<<"quotient :"<<result<<endl;
     }
     catch(int ex)
     {
-        cout<<"exception:division by zero is not allowed"<<ex;
+        cout<<"exception caught :"<<ex<<endl;
+        cout<<"exception:division by zero is not allowed";
     }
+    cout<<"\nEnd of the program\n";
+    cout<<"------------------------\n";
+    
+    cout<<"\ndo you want to continue the program ? (y/n)  :  ";
+    cin>>option;
+    }while(option=='y');
+    
     return 0;
+    
 }
-//exception
