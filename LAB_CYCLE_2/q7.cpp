@@ -1,13 +1,12 @@
 #include<iostream>
 using namespace std;
+
 class alpha
 {
-    protected:
+protected:
     int a;
-    public:
-    alpha()
-    {
-    }
+public:
+    alpha() {}
     alpha(int x)
     {
         a=x;
@@ -15,36 +14,34 @@ class alpha
     }
     void get_a()
     {
-        cout<<"the value of a :"<<a<<endl;
+        cout<<"the value of a : "<<a<<endl;
     }
 };
+
 class beta
 {
-    protected:
+protected:
     int b;
-    public:
-    beta()
-    {
-    }
+public:
+    beta() {}
     beta(int y)
     {
         b=y;
-         cout<<"parameterized constructor of class beta is invoked"<<endl;
+        cout<<"parameterized constructor of class beta is invoked"<<endl;
     }
-     void get_b()
+    void get_b()
     {
-        cout<<"the value of b :"<<b<<endl;
+        cout<<"the value of b : "<<b<<endl;
     }
 };
-class gama:public alpha,public beta
+
+class gama: public alpha, public beta
 {
-    protected:
+protected:
     int g;
-    public:
-    gama()
-    {
-    }
-    gama(int a,int b,int z):alpha(a),beta(b)
+public:
+    gama() {}
+    gama(int x, int y, int z): alpha(x), beta(y)
     {
         g=z;
         cout<<"parameterized constructor of class gama is invoked"<<endl;
@@ -53,21 +50,22 @@ class gama:public alpha,public beta
     {
         get_a();
         get_b();
-        cout<<"the value of g :"<<g<<endl;
-    
+        cout<<"the value of g : "<<g<<endl;
     }
 };
+
 int main()
 {
-    int a,b,g;
-    cout<<"enter the value of a"<<endl;
-    cin>>a;
-      cout<<"enter the value of a"<<endl;
-    cin>>b;
-      cout<<"enter the value of a"<<endl;
-    cin>>g;
-    gama ob1(int a,int b,int g);
-    // ob1.display();
+    int m, n, p;
+    cout<<"enter the value of a in alpha class: ";
+    cin>>m;
+    cout<<"\nenter the value of b in beta class: ";
+    cin>>n;
+    cout<<"\nenter the value of g in gama class: ";
+    cin>>p;
+    gama obj{m, n, p};
+    obj.display();
     return 0;
 }
+
 
