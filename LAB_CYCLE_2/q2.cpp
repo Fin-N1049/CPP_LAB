@@ -16,7 +16,7 @@ class complex
        if(imag<0)
        cout<<real<<imag<<"i";
        else
-       cout<<real<<"+"<<imag<<"i";
+       cout<<real<<"+"<<imag<<"i"<<endl<<endl;
        
     }
     friend complex operator+(complex a,complex b);
@@ -39,6 +39,9 @@ class complex
     }
 int main()
 {
+    char option;
+    int choice;
+    do{
     complex c1,c2,c3;
     cout<<"Complex 1"<<endl;
     c1.input();
@@ -48,13 +51,35 @@ int main()
     c1.display();
     cout<<endl<<"Complex 2 :";
     c2.display();
-    c3=c1+c2;
-    cout<<endl<<"sum of the two complex  :";
-    c3.display();
-    c3=c1*c2;
-    cout<<endl<<"product of the two complex :";
-    c3.display();
-
-    
+    cout<<"enter 1 to perform addition of the two matrices  :\n";
+    cout<<"enter 2 to perform multiplication of the two matrices  :\n";
+    cin>>choice;
+    if(choice==1)
+    {
+        c3=c1+c2;
+        cout<<endl<<"sum of the two complex  :";
+        c3.display();
+    }
+    else if(choice==2)
+    {
+        c3=c1*c2;
+        cout<<endl<<"product of the two complex :";
+        c3.display();
+    }
+    else
+    {
+        cout<<"invalid option,re-enter option";
+    }
+    cout<<"do you want to continue the program ?(y/n)  :";
+    cin>>option;
+    if (option=='n')
+    {
+        cout<<"-----thank you-----";
+    }
+    else
+    {
+        
+    }
+    }while(option=='y');
     return 0 ;
 }
