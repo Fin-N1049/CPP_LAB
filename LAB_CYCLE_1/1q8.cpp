@@ -39,8 +39,7 @@ int main(){
     int r1,i1,r2,i2,choice;
     char option;
     do{
-   complex c1;
-   complex c2;
+   complex c[2];
 
 for(int i=0;i<2;i++)
 {
@@ -54,13 +53,13 @@ if(choice==1)
   cin>>r1;
   cout<<"enter the value of imaginary part :";
   cin>>i1;
-  complex c1(r1,i1);
+  c[i]=complex(r1,i1);
 }
 else if(choice==2)
   {
      cout<<"enter the value for real and imaginary part :";
       cin>>r1;
-      complex c1(r1);
+      c[i]=complex(r1);
   }
   else
 {
@@ -71,11 +70,11 @@ else if(choice==2)
 cout<<"-\n\n";
 complex c3;
 
-c3.sum(c1,c2);
+c3.sum(c[0],c[1]);
 cout<<"first complex :";
-c1.display();
+c[0].display();
 cout<<"second complex :";
-c2.display();
+c[1].display();
 cout<<"resultant complex :";
 c3.display();
 

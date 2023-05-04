@@ -65,19 +65,19 @@ for(int i=0;i<d1;i++)
    }
   }
   
-  void transpose()
+  matrix transpose()
   {
+    matrix tr(d2,d1)
       
       for(int i=0;i<d1 ;i++)
    {
       for(int j=0;j<d2;j++)
     {
-        cout<<p[j][i]<<" ";
+        tr.p=p[j][i];
     }
-    cout<<endl; 
        
    }
-    cout<<endl<<endl;  
+   return tr;
   }
   
   void trace()
@@ -142,10 +142,13 @@ else
 {
     cout<<"!!!!!enter matrices of same order,sum can't be found!!!!!"<<endl;
 }
+matrix tr1,tr2;
 cout<<"transpose of first matrix"<<endl;
-a.transpose();
+tr1=a.transpose();
+tr1.display_matrix();
 cout<<"transpose of second matrix"<<endl;
-b.transpose();
+tr2=b.transpose();
+tr2.display_matrix();
 cout<<"the trace of first matrix =";
 a.trace();
 cout<<"the trace of second matrix =";
