@@ -125,7 +125,8 @@ int main()
     {
     }
     result rt(r,n,m,o,p,s);
-    cout<<"details of student "<<i+1<<endl;
+    cout<<"\n\ndetails of student "<<i+1<<endl;
+    cout<<"------------------------------------"<<endl;
     rt.display();
     
     }
