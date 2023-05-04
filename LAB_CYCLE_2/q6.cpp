@@ -14,6 +14,7 @@ class Student
     {
         roll_no=r;
         strcpy(name,n);
+        
     }
      void show_details()
     {
@@ -74,53 +75,61 @@ class result:public test,public sports
        show_marks();
        show_score();
        calc_result();
-       cout<<"overall score of student="<<total;
+       cout<<"overall score of student="<<total<<endl<<endl;
     }
 };
 int main()
 {
+    int n;
+    cout<<"enter number of students  :";
+    cin>>n;
+    for (int i=0;i<n;i++)
+    {
+        cout<<"-----STUDENT  "<<i+1<<"------\n\n";
     int r,m,o,p,s;
     char n[15];
-    cout<<"enter the name of the student :"<<endl;
+    cout<<"enter the name of the student :";
     cin>>n;
-    cout<<"enter the roll.no of the student :"<<endl;
+    cout<<"\nenter the roll.no of the student :";
     cin>>r;
-    cout<<"enter the mark of student in maths :"<<endl;
+    cout<<"\nenter the mark of student in maths :";
     cin>>m;
-     cout<<"enter the mark of student in english :"<<endl;
-    cin>>o;
-     cout<<"enter the mark of student in physics :"<<endl;
-    cin>>p;
-     cout<<"enter the score of student in sports :"<<endl;
-    cin>>s;
     if(m>50)
-    cout<<"error!!!please enter correct scores"<<endl;
+    {cout<<"error!!!please enter correct scores";
+    cin>>m;}
     else
     {
-        continue;
     }
-      if(o>50)
-    continue;
-    cout<<"error!!!please enter correct scores"<<endl;
+     cout<<"enter the mark of student in english :";
+    cin>>o;
+    if(o>50)
+    {cout<<"error!!!please enter correct scores"<<endl;
+    cin>>o;}
     else
     {
-        continue;
     }
-      if(p>50)
-    cout<<"error!!!please enter correct scores"<<endl;
+     {cout<<"enter the mark of student in physics :";
+    cin>>p;}
+    if(p>50)
+    {cout<<"error!!!please enter correct scores"<<endl;
+    cin>>p;}
     else
     {
-        continue;
     }
-      if((s>50))
-    cout<<"error!!!please enter correct scores"<<endl;
+     cout<<"enter the score of student in sports :";
+    cin>>s;
+    if((s>50))
+    {cout<<"error!!!please enter correct scores"<<endl;
+    cin>>s;}
     else
     {
-        continue;
     }
-    result rt(r,m,o,p,s);
+    result rt(r,n,m,o,p,s);
+    cout<<"details of student "<<i+1<<endl;
     rt.display();
-    cout<<"THANK YOU....";
+    
+    }
+    cout<<"..............THANK YOU..............";
     
     return 0;
 }
