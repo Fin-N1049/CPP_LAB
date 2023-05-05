@@ -63,7 +63,7 @@ class teacher:public person
        cout<<idno;
        cout<<"\nsalary  :";
        cout<<salary<<endl;
-       cout<<"\n------thank you----"
+       cout<<"\n------thank you----";
     }
 };
 int main()
