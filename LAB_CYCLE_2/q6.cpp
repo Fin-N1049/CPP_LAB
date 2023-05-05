@@ -18,8 +18,8 @@ class Student
     }
      void show_details()
     {
-        cout<<"name of the student :"<<name<<endl;
-        cout<<"roll.no. of the student :"<<roll_no<<endl;
+        cout<<"name of the student :"<<name;
+        cout<<"roll.no. of the student :"<<roll_no;
     }
     
 };
@@ -125,12 +125,12 @@ int main()
     {
     }
     result rt(r,n,m,o,p,s);
-    cout<<"\n\ndetails of student "<<i+1<<endl;
+    cout<<"\ndetails of student "<<i+1<<endl;
     cout<<"------------------------------------"<<endl;
     rt.display();
     
     }
-    cout<<"..............THANK YOU..............";
+    cout<<"..............THANK YOU.............."<<endl;
     
     return 0;
 }

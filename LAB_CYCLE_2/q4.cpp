@@ -53,7 +53,12 @@ for(int i=0;i<d1;i++)
 }cout<<endl<<endl<<endl;
    }
        
-    matrix operator+(matrix &a,matrix&b)
+   friend matrix operator +(matrix &a,matrix&b)
+   friend matrix operator *(matrix &a,matrix&b)
+  
+};
+
+  matrix operator+(matrix &a,matrix&b)
   {
       matrix c;
    for(int i=0;i<d1;i++)
@@ -80,7 +85,6 @@ for(int i=0;i<d1;i++)
     cout<<endl; 
    }
   }
-};
 
 int main()
  { 
