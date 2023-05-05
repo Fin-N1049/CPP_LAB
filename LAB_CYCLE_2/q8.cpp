@@ -72,8 +72,10 @@ class rectangle:public shapes
 
 
 int main() {
+    char option;
     int choice;
     shapes *bptr;
+    do{
     cout<<"enter 1 to calculate the area of a circle :"<<endl;
     cout<<"enter 2 to calculate the area of a square :"<<endl;
     cout<<"enter 3 to calculate the area of a ellipse :"<<endl;
@@ -109,7 +111,10 @@ int main() {
     
         cout<<"error!!!enter a number between 1 to 4"<<endl;
     break;
-}
+    cout<<"do you want to continue? (y/n)  :";
+    cin>>option;
+
+}while(option='y');
 cout<<"THANK YOU....";
     
     return 0;
