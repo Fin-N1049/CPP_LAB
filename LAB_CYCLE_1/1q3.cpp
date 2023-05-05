@@ -13,7 +13,7 @@ public:
     void withdraw(void);
     void deposit(void);
     void balance_enquiry(void);
-    int account_statement(int acc_no);
+    void account_statement(int acc_no);
 };
 
 void bank::new_acc(int acc_no)
@@ -85,7 +85,7 @@ void bank::balance_enquiry()
     }
 }
 
-int bank::account_statement(int acc_no)
+void bank::account_statement(int acc_no)
 {
     std::cout << "enter your password: ";
     std::cin >> userpass;
@@ -104,6 +104,7 @@ int bank::account_statement(int acc_no)
         std::cout << "wrong password";
     }
 }
+
 int main()
 {
     int option, amount, acc_no, count = 0;
