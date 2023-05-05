@@ -67,7 +67,7 @@ for(int i=0;i<d1;i++)
   
   matrix transpose()
   {
-    matrix tr(d2,d1)
+    matrix tr(d2,d1);
       
       for(int i=0;i<d1 ;i++)
    {
