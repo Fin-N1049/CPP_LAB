@@ -19,7 +19,10 @@ class Complex
     }
     void display()
     {
-        cout<<real<<"+"<<imag<<"i";
+         if(imag<0)
+       cout<<real<<imag<<"i";
+       else
+       cout<<real<<"+"<<imag<<"i"<<endl<<endl;
         
     }
     friend Complex add(Complex c1,Complex c2);
