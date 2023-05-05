@@ -44,7 +44,7 @@ int main(){
 for(int i=0;i<2;i++)
 {
 cout<<"-----number "<<i+1<<"-----\n";
-cout<<"1.different values for the real and imaginary part of the  complex \n2.same value for the real and imaginary part of the complex \n";
+cout<<"1.different values for the real and imaginary part of the first complex \n2.same value for the real and imaginary part of the first complex \n";
 cout<<"enter corresponding number to select the type of complex number :";
 cin>>choice;
 if(choice==1)
