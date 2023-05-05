@@ -92,19 +92,19 @@ bool vector::operator>=(vector &a)
 int main()
 {
     char option;
-    do {
+    
     vector ob1,ob2;
     cout<<"Enter the values for the first vector"<<endl;
     ob1.get_values();
-    cout<<"Enter the values for the first vector"<<endl;
+    cout<<"Enter the values for the second vector"<<endl;
     ob2.get_values();
     ob1.calc_mag();
     ob2.calc_mag();
-    cout<<"vector 1 :4";
+    cout<<"vector 1 :";
     ob1.display();
     cout<<endl<<"vector 2 :";
     ob2.display();
-    
+    do {
     int choice=0;
     cout<<endl<<endl<<endl;
             cout<<"Enter 1 for checking if both the vectors are equal,"<<endl;
