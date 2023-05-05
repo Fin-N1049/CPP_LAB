@@ -33,8 +33,8 @@ class complex
       complex operator*(complex a,complex b)
     {
         complex c;
-        c.real=a.real*b.real;
-        c.imag=a.imag*b.imag;
+        c.real=(a.real*b.real)-(a.imag*b.imag);
+        c.imag=(a.real*b.imag)+(b.real*a.imag);
         return c;
     }
 int main()
@@ -51,8 +51,8 @@ int main()
     c1.display();
     cout<<endl<<"Complex 2 :";
     c2.display();
-    cout<<"enter 1 to perform addition of the two matrices  :\n";
-    cout<<"enter 2 to perform multiplication of the two matrices  :\n";
+    cout<<"enter 1 to perform addition of the two complexes  :\n";
+    cout<<"enter 2 to perform multiplication of the two complexes  :\n";
     cin>>choice;
     if(choice==1)
     {
