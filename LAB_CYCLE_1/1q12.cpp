@@ -20,7 +20,7 @@ class Complex
     void display()
     {
          if(imag<0)
-       cout<<real<<imag<<"i";
+       cout<<real<<imag<<"i"<<endl<<endl;
        else
        cout<<real<<"+"<<imag<<"i"<<endl<<endl;
         
