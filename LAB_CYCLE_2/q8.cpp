@@ -114,7 +114,7 @@ int main() {
 }
     cout<<"do you want to continue? (y/n)  :";
     cin>>option;
-    }while(option='y');
+    }while(option=='y');
 cout<<"THANK YOU...."<<endl;
     
     return 0;
