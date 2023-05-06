@@ -17,9 +17,7 @@ class matrix {
     }
 
   }
-  matrix() {
-      cout << "hey" << endl;
-    } //default constructor
+  matrix() {} //default constructor
 
     ~matrix() //destructor
   {
